@@ -1,0 +1,282 @@
+/* Dashboard  */
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    background-image: url( "https://c.pxhere.com/photos/c9/5e/dandelion_seeds_flower_nature_summer_spring_plant_stem-1070886.jpg!d" );
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -41px;
+    right: 1px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding: 8px 20px;
+    background-color: rgba(64, 144, 172, 0.65);
+    color: white;
+}
+
+.navbar .pointer:hover {
+    opacity: 0.75;
+}
+
+.navbar > * {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar .menu > *, .navbar .actions > * {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 2px;
+    margin: 0px 4px;
+    background-color: rgba( 64, 144, 172, 1 );
+}
+
+.navbar .menu {
+    justify-content: flex-start;
+}
+
+.navbar .menu-input {
+    background-color: transparent;
+    padding: 0;
+}
+
+.navbar .menu-input input {
+    width: 120px;
+    padding: 4px 0.5em;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    background-color: rgba( 64, 144, 172, 1 );
+    color: white;
+    font-size: 1.15em;
+    line-height: 1.4;
+    color: black;
+}
+
+.navbar .menu-input input:focus {
+    background-color: lightgoldenrodyellow;
+    border-radius: 0.2rem;
+}
+
+
+
+.navbar .app-title {
+    justify-content: space-around;
+    font-family: "Comic Sans", "Comic Sans MS", cursive;
+    font-size: 1.3em;
+}
+
+.navbar .actions {
+    justify-content: flex-end;
+}
+
+.board-container {
+    display: flex;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.board-menu {
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    padding: 0 20px;
+    color: black;
+    background-color: goldenrod;
+    color: black;
+    border-radius: 3px;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+/* Board  */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Segoe UI, Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    color: rgb(143, 134, 134);
+    margin-bottom: 0;
+    overflow-x: hidden;
+}
+
+.board {
+    display: flex;
+    flex-basis: 100%;
+}
+
+.task-lists {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    flex-shrink: 0; 
+    overflow: auto;
+    margin-top: 20px;
+    
+}
+
+/* 
+.task-lists{
+    flex: 0 0 27rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(166, 224, 243);
+    max-height: calc(100vh - 11.8rem);
+    border-radius: 5px;
+    margin-right: 1.5rem;
+} */
+
+
+.add-task-list-wrapper {
+    flex-shrink: 0;
+}
+
+.task-lists-wrapper {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    padding: 84px 20px 20px;
+}
+
+.task-list-wrapper {
+    flex-shrink: 0;
+    flex-basis: 240px;
+    max-height: 100%;
+    overflow: visible;
+}
+
+.task-list, .add-list {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: rgb(202, 232, 241);
+}
+
+.task-list-title-container {
+    display: flex;
+    justify-content: space-between;
+}
+s
+.task-list-title {
+    margin: 4px;
+    font-weight: bold;
+}
+
+.task-list-more {
+    margin: 0 4px;
+}
+
+.task {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+.task .task-edit {
+    float: right;
+    display: none;
+}
+
+.task:hover .task-edit {
+    display: inline;
+}
+
+.add-card-message, .add-list-message {
+    margin-bottom: 4px 0 8px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.task-list .task, .task-list input, .task-list textarea, .task-list button {
+    border-radius: 4px;
+}
+
+input, textarea {
+    border: none;
+    outline: none;
+}
+
+.task-edit-form-actions, .add-card-form-actions, .add-list-form-actions {
+    margin: 10px 0;
+}
+
+.task-edit-button, .add-card-button, .add-list-button {
+    margin-right: 8px;
+}
+
+.task-edit-cancel, .add-card-cancel, .add-list-cancel {
+    position: relative;
+    top: 4px;
+}
+/* Btn effects  */
+.hide {
+    display: none;
+}
+
+.my-3 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.full-width-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lightgray;
+    font-size: 1em;
+    resize: none;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    font-size: 1.2em;
+    color: #aaa;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.btn-inline {
+    display: inline-block;
+    width: auto;
+}
+
+.btn-primary {
+    background-color: olive;
+    color: white;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.pointer:hover {
+    opacity: 0.7;
+}
+
+.pointer:active {
+    outline: none;
+}
